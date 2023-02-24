@@ -1,0 +1,75 @@
+.Plans{
+    margin: 100px 100px 0 100px;
+    h1{
+        color: white;
+        text-align: center;
+        font-weight: 600;
+        font-size: 40px;
+    }
+    h5{
+        color: white;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 100;
+    }
+    .Container{
+        display: flex;
+        margin: 100px 0 0 0;
+        .BusinessCard{
+            background-color: #141414;
+            color: white;
+            padding: 40px !important;
+            border-radius: 30px;
+            line-height: 30px;
+            z-index: 1;
+            h2{
+                font-weight: 600;
+            }
+            ul{
+                list-style-type: none;
+                padding: 0;
+                margin: 40px 0 0 0;
+                li{
+                    display: flex;
+                    gap: 10px;
+                    p{
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                }
+            }
+            .Button{
+                margin: 40px 0 0 0;
+                padding: 10px 25px;
+            }
+        }
+        .PersonalCard{
+            background-color: #242424;
+            margin: 20px 0 -30px -40px;
+            color: white;
+            padding: 40px 40px 40px 60px !important;
+            border-radius: 30px;
+            line-height: 30px;
+            h2{
+                font-weight: 600;
+            }
+            ul{
+                list-style-type: none;
+                padding: 0;
+                margin: 40px 0 0 0;
+                li{
+                    display: flex;
+                    gap: 10px;
+                    p{
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                }
+            }
+            .Button{
+                margin: 80px 0 0 0;
+                padding: 10px 25px;
+            }
+        }
+    }
+}

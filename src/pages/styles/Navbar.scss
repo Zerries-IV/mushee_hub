@@ -1,0 +1,32 @@
+@use '/src/custom';
+
+.PrimaryNavbar{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    height: 100%;
+    img{
+        width: 144px;
+        height: 61px;
+        object-fit: cover;
+    }
+    .AuthButton{
+        height: 100%;
+        .Button{
+            margin: 0 10px;
+            padding: 5px 20px;
+            transition: 1s;
+        }
+        .Button:hover {
+            padding: 5px 30px;
+        }
+    }
+}
+
+.NavLinks{
+    display: flex;
+    .nav-link{
+        color: custom.$white-color;
+        font-weight: 600;
+    }
+}

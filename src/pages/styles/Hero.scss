@@ -1,0 +1,42 @@
+.Hero {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 100px 0 100px;
+    gap: 10px;
+    .Hero_Text{
+        margin: 50px 0 0 0;
+        h1{
+            color: white;
+            font-size: 44px;
+            font-weight: 600;
+        }
+        p{
+            color: white;
+            margin: 15px 0 0 0;
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+            color: white;
+            margin: 10px 0 0 0;
+            li{
+                display: flex;
+                gap: 10px;
+                padding: 10px 0 ;
+                p{
+                    font-size: 16px;
+                    font-weight: 400;
+                    margin: 0;
+                }
+            }
+        }
+        .AuthButton{
+            margin: 20px 0 0 0;
+            display: flex;
+            gap: 20px;
+            .Button{
+                padding: 10px 100px;
+            }
+        }
+    }
+}

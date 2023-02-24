@@ -1,0 +1,83 @@
+.Contact{
+    margin: 60px 50px 0 50px;
+    background-color: #242424;
+    color: white;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    gap: 30px;
+    .ContactText{
+        width: 50%;
+        h1{
+            font-size: 32px;
+            font-weight: 600;
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 40px 0 0 0;
+            li{
+                display: flex;
+                gap: 10px;
+                padding: 10px 0 0 0;
+                p{
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .ContactForm {
+        width: 50%;
+        form {
+            .form-control {
+                width: 100%;
+                background-color: #242424;
+                border-radius: 15x;
+                color: white;
+                padding: 15px 20px;
+                border-color: gray;
+                margin: 20px 0 10px 0;
+            }
+            .form-control::placeholder{
+                color: gray;
+            }
+            .form-control:focus{
+                box-shadow: none !important;
+            }
+            .form-check{
+                margin: 30px 0 0 0;
+
+            }
+            .Button{
+                width: 100%;
+                padding: 10px 0;
+                margin: 30px 0 0 0;
+            }
+        }
+    }
+}
+
+.Container{
+    margin: 60px 50px 0 50px;
+    background-color: #141414;
+    color: white;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    gap: 100px;
+    text-align: left;
+    img{
+        height: 370px;
+        width: 470px;
+    }
+    .ContainerText{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1{
+            font-weight: 600;
+            font-size: 30px
+        }
+    }
+}
