@@ -5,10 +5,14 @@
     justify-content: space-around;
     padding: 20px;
     height: 100%;
-    img{
+    .LogoImage{
         width: 144px;
         height: 61px;
         object-fit: cover;
+    }
+    #NavSocials{
+        display: flex;
+        flex-direction: row;
     }
     .AuthButton{
         height: 100%;

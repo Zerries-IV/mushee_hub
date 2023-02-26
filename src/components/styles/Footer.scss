@@ -1,0 +1,76 @@
+.Footer{
+    .FooterTop{
+        margin: 100px 0 0 0;
+        padding: 40px 100px 0 100px;
+        color: white;
+        background-color: #141414;
+        display: flex;
+        justify-content: space-between;
+        .Top{
+            .LogoImage{
+                width: 144px;
+                height: 61px;
+                object-fit: cover;
+            }
+            p{
+                color: gray;
+                margin: 10px 0 0 0;
+                font-size: 14px;
+            }
+        }
+        .ShortLinks{
+            display: flex;
+            justify-content: space-between;
+            gap: 150px;
+            .Primary{
+                h3{
+                    font-size: 18px;
+                }
+                .NavLinks{
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 0 0 -15px;
+                    .nav-link{
+                        color: gray;
+                    }
+                }
+            }
+            .Support{
+                h3{
+                    font-size: 18px;
+                }
+                .NavLinks{
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 0 0 -15px;
+                    .nav-link{
+                        color: gray;
+                    }
+                }
+            }
+        }
+    }
+    .FooterBottom{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 100px 10px 100px;
+        color: gray;
+        background-color: #141414;
+        #NavSocials{
+            display: flex;
+            flex-direction: row;
+        }
+        .BottomText{
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            h5{
+                font-weight: 100;
+                font-size: 16px
+            }
+            p{
+                font-weight: 100;
+            }
+        }
+    }
+}

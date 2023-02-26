@@ -1,7 +1,50 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import "./styles/Plans.scss"
-import { CheckCircle } from '@mui/icons-material'
+import { CheckCircle, BoltRounded, ShieldMoonRounded } from '@mui/icons-material'
+
+export const CryptoForBusiness = () => {
+  return(
+    <div className='CryptoForBusiness'>
+      <h2> Cryptocurrency for business</h2>
+      <div className='Card'>
+        <CardFlexible />
+        <CardFast />
+        <CardSecure />
+      </div>
+    </div>
+  )
+}
+
+const CardFlexible = () => {
+  return(
+    <div className='CryptoForBusinessCard'>
+      <CheckCircle />
+      <h2> Flexible </h2>
+      <p>Accept payments wherever it is convenient<br /> for you – on your business’ website, in a bot<br /> or the mobile app.</p>
+    </div>
+  )
+}
+
+const CardFast = () => {
+  return(
+    <div className='CryptoForBusinessCard'>
+      <BoltRounded />
+      <h2> Fast </h2>
+      <p>The quickest transactions you’ve ever seen,<br /> try it yourself.</p>
+    </div>
+  )
+}
+
+const CardSecure = () => {
+  return(
+    <div className='CryptoForBusinessCard'>
+      <ShieldMoonRounded />
+      <h2> Secure </h2>
+      <p>Totally anonymous and fully protected –<br /> security is the key.</p>
+    </div>
+  )
+}
 
 const BusinessSolution = () => {
   return(

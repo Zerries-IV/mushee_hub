@@ -1,20 +1,22 @@
-import './App.scss';
-import Navbar from './pages/Navbar';
-import Hero from './pages/Hero';
-import Plans from './pages/Plans';
-import Solution from './pages/Solution';
-import Contact, { Cryptocurency } from './pages/Contact';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import './App.scss'
+import Businesses from './pages/Businesses';
+import Home from './pages/Home';
+
+export const router = createBrowserRouter([
+  {
+    path: '/',
+    element: (<Home />)
+  },
+  {
+    path: 'businesses',
+    element: (<Businesses />)
+  }
+])
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <Plans />
-      <Solution />
-      <Contact />
-      <Cryptocurency />
-    </div>
+    <RouterProvider router={router} />
   );
 }
 

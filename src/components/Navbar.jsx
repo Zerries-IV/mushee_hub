@@ -1,11 +1,12 @@
-import Button from 'react-bootstrap/Button'
+// import Button from 'react-bootstrap/Button'
 import React from 'react'
 import "./styles/Navbar.scss"
 import { Nav } from 'react-bootstrap'
+import { Socials } from './Footer'
 
-const Logo = () => {
+export const Logo = () => {
     return (
-        <img src='images/Logo.png' alt="logo" srcSet="" />
+        <img src='images/Logo.png' alt="logo" srcSet="" className='LogoImage'/>
     )
 }
 
@@ -15,20 +16,12 @@ export const NAVBAR_LINKS = [
         link: 'Home'
     },
     {
-        href: '#tariffs',
-        link: 'Tariffs'
-    },
-    {
-        href: '#converter',
-        link: 'Converter'
-    },
-    {
-        href: '#businesses',
+        href: '/businesses',
         link: 'Businesses'
     },
     {
-        href: '#blog',
-        link: 'Blogs'
+        href: 'https://mushee.gitbook.io/mushee',
+        link: 'Whitepaper'
     },
     {
         href: '#FAQ',
@@ -59,10 +52,11 @@ const PrimaryNavbar = () => {
         <div className='PrimaryNavbar'>
         <Logo />
         <NavLinks />
-        <div className='AuthButton'>
+        <Socials />
+        {/* <div className='AuthButton'>
             <Button variant='primary' className="Button">Sign in</Button>
-            <Button variant='outline-primary' className="Button">Log in</Button> 
-        </div>
+            <Button variant='outline-primary' className="Button">Log in</Button>
+        </div> */}
     </div>
     )
 }

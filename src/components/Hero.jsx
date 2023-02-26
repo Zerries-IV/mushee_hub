@@ -4,9 +4,9 @@ import Button from 'react-bootstrap/Button'
 import { Bolt, ArrowDownward, AccountBalanceWallet, Message } from '@mui/icons-material';
 
 
-const HeroText = () => {
+const HomeHeroText = () => {
     return (
-        <div className='Hero_Text'>
+        <div className='HomeHero_Text'>
             <h1>
                 Accept Crypto Payments with<br />Mushee
             </h1>
@@ -38,19 +38,45 @@ const HeroText = () => {
     )
 }
 
-const HeroImg = () => {
+const HomeHeroImg = () => {
     return (
         <img alt='mushee' srcSet='' src='https://cryptomus.com/img/title-phone-dark.png' />
     )
 }
 
-const Hero = () => {
+const BusinessHeroText = () => {
+    return(
+        <div className='BusinessHero_Text'>
+            <p>PAYMENT GATEWAY</p>
+            <h1>
+                Accept payments in Bitcoin and other<br /> currencies with our crypto gateway
+            </h1> 
+            <p>Is your business ready to classic payment systems replacement?<br/>
+                We are here to help you make it more sophisticated and attract those modern<br />
+                clients who prefer to pay in crypto.</p>           
+            <div className='AuthButton'>
+                <Button variant='primary' className="Button">Connect</Button>
+                <Button variant='outline-primary' className="Button">Contact us</Button> 
+            </div>
+        </div>
+    )
+}
+
+export const BusinessHero = () => {
+    return(
+        <header className='BusinessHero'>
+            <BusinessHeroText />
+        </header>
+    )
+}
+
+const HomeHero = () => {
   return (
-    <header className='Hero'>
-        <HeroText />
-        <HeroImg />
+    <header className='HomeHero'>
+        <HomeHeroText />
+        <HomeHeroImg />
     </header>
   )
 }
 
-export default Hero
+export default HomeHero

@@ -45,9 +45,9 @@
         }
         .PersonalCard{
             background-color: #242424;
-            margin: 20px 0 -30px -40px;
+            margin: 0 0 0 -40px;
             color: white;
-            padding: 40px 40px 40px 60px !important;
+            padding: 40px !important;
             border-radius: 30px;
             line-height: 30px;
             h2{
@@ -69,6 +69,36 @@
             .Button{
                 margin: 80px 0 0 0;
                 padding: 10px 25px;
+            }
+        }
+    }
+}
+
+.CryptoForBusiness {
+    margin: 80px 80px 0 80px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+        font-size: 48px;
+        font-weight: 600;
+        margin: 20px 0 40px 0;
+    }
+    .Card {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        .CryptoForBusinessCard{
+            border-radius: 30px;
+            background-color: #242424;
+            padding: 40px 20px 10px 20px;
+            h2{
+                margin: 50px 0 10px 0;
+                font-size: 20px;
+            }
+            p{
+                font-size: 14px;
             }
         }
     }

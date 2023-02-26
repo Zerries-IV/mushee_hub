@@ -1,9 +1,9 @@
-.Hero {
+.HomeHero {
     display: flex;
     justify-content: space-between;
     margin: 40px 100px 0 100px;
     gap: 10px;
-    .Hero_Text{
+    .HomeHero_Text{
         margin: 50px 0 0 0;
         h1{
             color: white;
@@ -33,6 +33,32 @@
         .AuthButton{
             margin: 20px 0 0 0;
             display: flex;
+            gap: 20px;
+            .Button{
+                padding: 10px 100px;
+            }
+        }
+    }
+}
+
+.BusinessHero{
+    height: 75vh;
+    margin: 60px 0 0 0;
+    color: white;
+    .BusinessHero_Text{
+        text-align: center;
+        p {
+            font-weight: 600;
+            padding: 20px 0;
+        }
+        h1 {
+            font-size: 50px;
+            font-weight: 700;
+        }
+        .AuthButton{
+            margin: 20px 0 0 0;
+            display: flex;
+            justify-content: center;
             gap: 20px;
             .Button{
                 padding: 10px 100px;
