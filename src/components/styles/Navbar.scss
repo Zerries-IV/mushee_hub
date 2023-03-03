@@ -2,8 +2,8 @@
 
 .PrimaryNavbar{
     display: flex;
-    justify-content: space-around;
-    padding: 20px;
+    justify-content: space-between;
+    padding: 20px 20px 0 20px;
     height: 100%;
     .LogoImage{
         width: 144px;
@@ -13,24 +13,42 @@
     #NavSocials{
         display: flex;
         flex-direction: row;
+        margin-top: 10px;
     }
-    .AuthButton{
-        height: 100%;
-        .Button{
-            margin: 0 10px;
-            padding: 5px 20px;
-            transition: 1s;
+
+    @media (max-width: 375px) {
+        .LogoImage{
+            width: 100px;
+            height: 42px;
         }
-        .Button:hover {
-            padding: 5px 30px;
+        #NavSocials{           
+            margin: 5px 0;
+            
         }
     }
 }
 
 .NavLinks{
     display: flex;
+    justify-content: center;
+    background-color: #141414;
+    padding: 10px 0;
     .nav-link{
         color: custom.$white-color;
         font-weight: 600;
     }
+
+    @media (max-width: 382px) {
+        .nav-link{
+            margin: 5px 0;
+            font-size: 14px !important;
+        }
+    }
+    
+    @media (max-width: 350px) {
+        .nav-link{
+            font-size: 12px !important;
+        }
+    }
 }
+

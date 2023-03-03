@@ -1,7 +1,8 @@
 .Mushee{
-    margin: 100px 40px 0 40px;
+    margin: 100px 20px 0 20px;
     .Container{
         display: flex;
+        justify-content: space-between;
         .AffiliateCard{
             background-color: #141414;
             color: white;
@@ -56,6 +57,87 @@
                 }
                 .Button:hover {
                     padding: 15px 35px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1024px){
+        .Container{
+            .AffiliateCard{
+                h2{
+                font-size: 22px !important;
+                }
+            }
+            .Service{
+                .AuthButton{                
+                    .Button{
+                        margin: 0 10px;
+                        padding: 5px 20px;
+                        transition: 1s;
+                    }
+                    .Button:hover {
+                        padding: 10px 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 769px){
+        .Container{
+            flex-direction:column;
+
+            .Service{
+                margin: 0 !important;
+                .AuthButton{
+                    .Button{                      
+                        padding: 10px 30px; 
+                        margin: 10px !important;                       
+                    }
+                    .Button:hover {
+                        padding: 15px 35px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 426px){
+        margin: 100px 10px 0 10px;
+        .Container{
+            .AffiliateCard{
+                h2{
+                font-size: 20px !important;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+            .Service{
+                p {
+                    font-size: 12px;
+                }
+                h2{
+                    font-size: 20px;
+                }
+                ul{
+                    li{
+                        p{
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .AuthButton{
+                    margin: 40px  0 0 0;
+                    .Button{
+                        margin: 0 10px;
+                        padding: 10px 30px;
+                        transition: 1s;
+                    }
+                    .Button:hover {
+                        padding: 15px 35px;
+                    }
                 }
             }
         }

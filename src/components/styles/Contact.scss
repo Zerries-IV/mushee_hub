@@ -56,6 +56,72 @@
             }
         }
     }
+
+    @media (max-width: 1024px){
+        .ContactText{
+            h1{
+                font-size: 30px;
+            }
+        }
+    }
+
+    @media (max-width: 768px){
+        display: grid;
+        .ContactText{
+            width: 100%;
+            h1{
+                font-size: 26px;
+            }
+            ul{
+                li{
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .ContactForm {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 476px){
+        margin: 50px 20px 0 20px;
+        padding: 20px;
+        .ContactText{
+            ul{
+                li{
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 376px){
+        .ContactText{
+            h1{
+                font-size: 20px;
+            }
+        }
+    }
+
+    @media (max-width: 320px){
+        .ContactText{
+            h1{
+                font-size: 18px;
+            }
+            ul{
+                li{
+                    p{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .Container{
@@ -78,6 +144,48 @@
         h1{
             font-weight: 600;
             font-size: 30px
+        }
+    }
+
+    @media (max-width: 1024px){
+        .ContainerText {
+            h1{
+                font-size: 26px;
+            }
+        }
+    }
+
+    @media (max-width: 769px){
+        gap: 20px;
+        flex-direction: column-reverse;
+        text-align: center;
+        img{
+            height: 270px;
+            width: 340px;
+        }
+        .ContainerText {
+            h1{
+                font-size: 22px;
+            }
+        }
+    }
+
+    @media (max-width: 426px){
+        margin: 50px 20px 0 20px;
+        padding: 20px;
+    }
+
+    @media (max-width: 376px){
+        img{
+            height: 240px;
+            width: 300px;
+        }
+    }
+
+    @media (max-width: 376px){
+        img{
+            height: 240px;
+            width: 240px;
         }
     }
 }

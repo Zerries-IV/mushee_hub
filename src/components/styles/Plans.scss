@@ -14,11 +14,12 @@
     }
     .Container{
         display: flex;
+        gap: 30px;
         margin: 100px 0 0 0;
         .BusinessCard{
             background-color: #141414;
             color: white;
-            padding: 40px !important;
+            padding: 30px !important;
             border-radius: 30px;
             line-height: 30px;
             z-index: 1;
@@ -45,7 +46,7 @@
         }
         .PersonalCard{
             background-color: #242424;
-            margin: 0 0 0 -40px;
+            margin: 0 0 0 -30px;
             color: white;
             padding: 40px !important;
             border-radius: 30px;
@@ -70,6 +71,136 @@
                 margin: 80px 0 0 0;
                 padding: 10px 25px;
             }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        margin: 50px;
+
+        h1 {
+          font-size: 32px;
+        }
+    
+        h5 {
+          font-size: 14px;
+        }
+    
+        .Container {
+          margin-top: 50px;
+    
+          .BusinessCard,
+          .PersonalCard {
+            margin: 0;
+            width: 100%;
+          }
+    
+          .BusinessCard {
+            margin-bottom: 50px;
+            padding: 20px !important;
+            h2{
+                font-size: 28px;
+            }
+          }
+        }
+    }
+
+    @media (max-width: 769px) {
+        h1 {
+          font-size: 36px;
+        }
+    
+        h5 {
+          font-size: 13px;
+        }
+    
+        .Container {    
+          .BusinessCard {
+            margin-bottom: 30px;
+            padding: 0 !important;
+            h2{
+                font-size: 16px;
+            }
+            ul{
+                li{
+                    p{
+                        font-size: 12px;
+                        font-weight: 400;
+                    }
+                }
+            }
+          }
+
+          .PersonalCard {
+            margin-bottom: 50px;
+            h2{
+                font-size: 16px;
+            }
+            ul{
+                li{
+                    p{
+                        font-size: 12px;
+                        font-weight: 400;
+                    }
+                }
+            }
+          }
+        }
+    }
+
+    @media (max-width: 426px) {
+        margin: 50px 20px 0 20px;
+        h1 {
+          font-size: 30px;
+        }
+    
+        h5 {
+          font-size: 12px;
+        }
+    
+        .Container {
+            display: flex;
+            flex-direction: column;
+            padding: 20px !important;   
+          .BusinessCard {
+            margin: 20px 0;
+            h2{
+                font-size: 16px;
+            }
+            ul{
+                li{
+                    p{
+                        font-size: 12px;
+                        font-weight: 400;
+                    }
+                }
+            }
+          }
+
+          .PersonalCard {
+            margin: 20px 0;
+            padding: 20px !important;
+            h2{
+                font-size: 16px;
+            }
+            ul{
+                li{
+                    p{
+                        font-size: 12px;
+                        font-weight: 400;
+                    }
+                }
+            }
+          }
+        }
+    }
+
+    @media (max-width: 376px) {
+        h1 {
+            font-size: 25px;
+        }
+
+        h5 {
+            font-size: 10px;
         }
     }
 }
@@ -100,6 +231,39 @@
             p{
                 font-size: 14px;
             }
+        }
+    }
+
+    @media (max-width: 769px) {
+        margin: 60px 40px 0 40px;
+        h2 {
+            font-size: 38px;
+        }
+        .Card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            .CryptoForBusinessCard{
+                h2{
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 426px) {
+        h2 {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 376px) {
+        h2 {
+            font-size: 20px;
         }
     }
 }

@@ -20,8 +20,8 @@ const Contact = () => {
   return (
     <div className='Contact'>
         <div className='ContactText'>
-            <h1>Send your contacts and get<br />
-            the most suitable solution<br />
+            <h1>Send your contacts and get
+            the most suitable solution
             for your business</h1>
             <ul>
                 <li>

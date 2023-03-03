@@ -39,6 +39,80 @@
             }
         }
     }
+
+    @media (max-width: 1024px) {
+        margin: 40px 50px 0 50px;
+        .HomeHero_Text{
+            margin: 50px 0 0 0;
+            h1{
+                font-size: 30px;
+            }
+            p{
+               font-size: 14px;
+            }
+            .AuthButton{
+                gap: 10px;
+                margin: 50px 0 0 0;
+                .Button{
+                    padding: 10px 50px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        margin: 40px 50px 0 50px;
+        img{
+            display: none;
+        }
+        .HomeHero_Text{
+            h1{
+                font-size: 30px;
+            }
+            p{
+               font-size: 14px;
+            }        
+        }
+    }
+
+    @media (max-width: 426px) {
+        margin: 10px 20px 0 20px !important;        
+        .HomeHero_Text{
+            h1{
+                font-size: 22px !important;
+            }
+            p{
+                font-size: 10px;
+            }
+            .AuthButton{
+                .Button{
+                    padding: 10px 30px !important;
+                }
+            }            
+        }
+    }
+
+    @media (max-width: 376px) {   
+        .HomeHero_Text{
+            p {
+                font-size: 8px !important;
+            }                    
+        }
+    }
+
+    @media (max-width: 321px) {
+        margin: 5px 20px 0 20px !important;        
+        .HomeHero_Text{
+            h1{
+                font-size: 18px !important;
+            }
+            .AuthButton{
+                .Button{
+                    padding: 6px 20px !important;
+                }
+            }            
+        }
+    }
 }
 
 .BusinessHero{
@@ -63,6 +137,75 @@
             .Button{
                 padding: 10px 100px;
             }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        margin: 40px 50px 0 50px;
+        .BusinessHero_Text{
+            margin: 50px 0 0 0;
+            h1{
+                font-size: 40px;
+            }
+            p{
+               font-size: 14px;
+            }
+            .AuthButton{
+                margin: 50px 0 0 0;
+                .Button{
+                    padding: 10px 50px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .BusinessHero_Text{
+            h1{
+                font-size: 30px;
+            }     
+        }
+    }
+
+    @media (max-width: 426px) {
+        margin: 10px 20px 0 20px !important;        
+        .BusinessHero_Text{
+            h1{
+                font-size: 20px !important;
+            }
+            p{
+                font-size: 9px !important;
+            }
+            .AuthButton{
+                .Button{
+                    padding: 10px 30px !important;
+                }
+            }            
+        }
+    }
+
+    @media (max-width: 376px) {   
+        .BusinessHero_Text{
+            h1{
+                font-size: 18px !important;
+            }
+            p {
+                font-size: 8px !important;
+            }                    
+        }
+    }
+
+    @media (max-width: 321px) {
+        margin: 5px 20px 0 20px !important;        
+        .BusinessHero_Text{
+            h1{
+                font-size: 15px !important;
+            }
+            .AuthButton{
+                .Button{
+                    padding: 6px 20px !important;
+                }
+            }            
         }
     }
 }

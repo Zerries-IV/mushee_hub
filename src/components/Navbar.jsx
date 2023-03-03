@@ -4,9 +4,11 @@ import "./styles/Navbar.scss"
 import { Nav } from 'react-bootstrap'
 import { Socials } from './Footer'
 
+const LOGO_URL = 'https://raw.githubusercontent.com/nnoromiv/mushee/master/public/images/mushee.jpg'
+
 export const Logo = () => {
     return (
-        <img src='images/Logo.png' alt="logo" srcSet="" className='LogoImage'/>
+        <img src={LOGO_URL} alt="logo" srcSet="" className='LogoImage'/>
     )
 }
 
@@ -51,13 +53,8 @@ const PrimaryNavbar = () => {
     return(
         <div className='PrimaryNavbar'>
         <Logo />
-        <NavLinks />
         <Socials />
-        {/* <div className='AuthButton'>
-            <Button variant='primary' className="Button">Sign in</Button>
-            <Button variant='outline-primary' className="Button">Log in</Button>
-        </div> */}
-    </div>
+        </div>
     )
 }
 
@@ -65,6 +62,7 @@ const Navbar = () => {
   return (
     <header>
         <PrimaryNavbar />
+        <NavLinks />
     </header>
   )
 }
