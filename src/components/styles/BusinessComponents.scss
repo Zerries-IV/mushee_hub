@@ -10,13 +10,34 @@
     }
     .AnswersWrap{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));;
         gap: 30px;
         h2{
             font-size: 20px;
         }
         p{
             font-size: 12px;
+        }
+    }
+
+    @media (max-width: 1024px){
+        padding: 100px 50px;
+        h1{ 
+            font-size: 40px;
+        }
+    }
+
+    @media (max-width: 769px){
+        padding: 50px;
+        h1{ 
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 426px){
+        padding: 25px;
+        h1{ 
+            font-size: 25px;
         }
     }
 }
@@ -67,6 +88,40 @@
                     font-size: 14px
                 }
             }
+        }
+    }
+
+    @media (max-width: 1024px){
+        margin: 60px 50px 0 50px;
+        h1{ 
+            font-size: 50px;
+        }
+    }
+
+    @media (max-width: 769px){
+        margin: 50px 25px 0 25px;
+        h1{ 
+            font-size: 40px;
+        }
+        .ChoiceList{
+            grid-template-columns: repeat(2, 1fr);           
+        }
+    }
+
+    @media (max-width: 426px){
+        h1{ 
+            font-size: 20px;
+        }
+        .Icons{
+            .muiIcon {
+                width: 70px;
+                padding: 15px;
+                height: 70px;
+                
+            }
+        }
+        .ChoiceList{
+            grid-template-columns: repeat(1, 1fr);           
         }
     }
 }

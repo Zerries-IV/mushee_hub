@@ -265,5 +265,9 @@
         h2 {
             font-size: 20px;
         }
+
+        .Card {
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        }
     }
 }
