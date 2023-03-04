@@ -5,7 +5,7 @@
         color: white;
         background-color: #141414;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between;    
         .Top{
             .LogoImage{
                 width: 144px;
@@ -21,7 +21,7 @@
         .ShortLinks{
             display: flex;
             justify-content: space-between;
-            gap: 150px;
+            gap: 100px;
             .Primary{
                 h3{
                     font-size: 18px;
@@ -70,6 +70,73 @@
             }
             p{
                 font-weight: 100;
+            }
+        }
+    }
+
+    @media (max-width: 768px){
+        .FooterTop{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            padding: 40px 50px 0 50px;
+            gap: 20px;
+            .ShortLinks{
+                gap: 0px;
+            }
+        }
+        .FooterBottom{
+            padding: 40px 50px 0 50px;
+        }
+    }
+
+    @media (max-width: 426px){
+        .FooterTop{
+            padding: 40px 20px 0 20px;
+            .ShortLinks{
+                gap: 0px;
+                width: 300px
+            }
+        }
+        .FooterBottom{
+            padding: 20px 20px 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            #NavSocials{
+               padding: 0 0 10px 0;
+            }
+            .BottomText{
+                gap: 20px;
+                h5{
+                    font-size: 14px
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 376px){
+        .FooterBottom{
+            .BottomText{
+                gap: 5px;
+                display: flex;
+                flex-direction: column-reverse;
+                h5{
+                    font-size: 14px
+                }
+                p{
+                    font-size: 14px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 320px){
+        .FooterTop{
+            .ShortLinks{
+                width: 250px
             }
         }
     }
