@@ -90,7 +90,12 @@
         .Container{
             flex-direction:column;
 
+            .AffiliateCard{
+                width: 100%;
+            }
+
             .Service{
+                width: 100%;
                 margin: 0 !important;
                 .AuthButton{
                     .Button{                      
