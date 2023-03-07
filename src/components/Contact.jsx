@@ -1,8 +1,7 @@
 import React from 'react'
 import { Button, Form } from 'react-bootstrap'
 import "./styles/Contact.scss"
-import { AutoAwesomeRounded, SettingsRounded, CheckCircleOutlineOutlined, MessageRounded } from '@mui/icons-material'
-
+import { AutoAwesomeRounded, SettingsRounded, CheckCircleOutlineOutlined, MessageRounded, FreeBreakfast } from '@mui/icons-material'
 
 export const Cryptocurency = () => {
     return(
@@ -20,23 +19,28 @@ const Contact = () => {
   return (
     <div className='Contact'>
         <div className='ContactText'>
-            <h1>Send your contacts and get
-            the most suitable solution
-            for your business</h1>
+            <h1>Do I need to pay for Mushee ?</h1>
             <ul>
                 <li>
-                    <AutoAwesomeRounded /><p>We will provide you with the best solution for your business</p>
-                </li>
-                <li>
-                    <SettingsRounded /><p>We will provide you with the best solution for your business</p>
-                </li>
-                <li>
-                    <CheckCircleOutlineOutlined /><p>We will provide you with the best solution for your business</p>
-                </li>
-                <li>
-                    <MessageRounded /><p>We will provide you with the best solution for your business</p>
+                    <FreeBreakfast /><p>Mushee is free!</p>
                 </li>
             </ul>
+            <h1>What can I do with Mushee</h1>
+            <ul>
+                <li>
+                    <AutoAwesomeRounded /><p>Send and Receive tokens</p>
+                </li>
+                <li>
+                    <SettingsRounded /><p>Token Swap</p>
+                </li>
+                <li>
+                    <CheckCircleOutlineOutlined /><p>Buy & Sell tokens</p>
+                </li>
+                <li>
+                    <MessageRounded /><p>Bridge</p>
+                </li>
+            </ul>
+            
         </div>
         <div className='ContactForm'>
             <Form>

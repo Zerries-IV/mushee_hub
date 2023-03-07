@@ -6,12 +6,9 @@ import {  ChatBubbleOutlineRounded, ArrowUpwardRounded, ShieldRounded, Shop2Roun
 const Affiliate = () => {
   return(
     <div className='AffiliateCard'>
-      <h2> Bring a client and receive<br />
-        up to 30% of the payment<br />
-        commission </h2>
-        <p>Share your referral link and earn up to 30% of the<br />
-            payment commission from all clients who use your link</p>
-      <Button variant='primary' className='Button'>Get a Referral Link</Button>
+      <h2> Abstract </h2>
+        <p>Bitcoin, Ethereum, and various derivative digital assets with Blockchain as their underlying technology have experienced explosive growth. Over 1,300 kinds of digital assets are now available for trading on the global market, with a total economic volume of more than $991 billion, which is still growing exponentially, with huge market potential</p>
+      <Button variant='primary' className='Button' href='https://mushee.gitbook.io/mushee/abstract'>Read more...</Button>
     </div>
   )
 }
@@ -24,24 +21,23 @@ const Service = () => {
       <ul>
         <li>
         <ChatBubbleOutlineRounded />
-        <p> 24/7 Live Chat Support </p>
+        <p> Mushee & DEFI </p>
         </li>
         <li>
         <ShieldRounded />
-        <p>  Superior security </p>
+        <p>  Mushee functions </p>
         </li>
         <li>
         <ArrowUpwardRounded />
-        <p> Automated Mass Payouts</p>
+        <p> Digital asset</p>
         </li>
         <li>
         <Shop2Rounded />
-        <p> E-commerce Integration Plugins</p>
+        <p> Decentralised loans </p>
         </li>
       </ul>
       <div className='AuthButton'>
-            <Button variant='primary' className="Button">Sign up now</Button>
-            <Button variant='outline-primary' className="Button">Connect with us</Button> 
+            <Button variant='outline-primary' className="Button" href='https://mushee.gitbook.io/mushee/features'>Read more...</Button> 
         </div>
     </div>
   )

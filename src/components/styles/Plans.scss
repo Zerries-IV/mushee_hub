@@ -14,9 +14,10 @@
     }
     .Container{
         display: flex;
-        gap: 30px;
+        justify-content: space-between;
         margin: 100px 0 0 0;
-        .BusinessCard{
+        transition: 2s;
+        .AfterPresale{
             background-color: #141414;
             color: white;
             padding: 30px !important;
@@ -38,13 +39,18 @@
                         font-weight: 400;
                     }
                 }
+                .More{
+                    border-radius: 50px ;
+                    padding: 1px 16px;
+                    font-size: 12px;
+                }
             }
             .Button{
                 margin: 40px 0 0 0;
                 padding: 10px 25px;
             }
         }
-        .PersonalCard{
+        .BeforePresale{
             background-color: #242424;
             margin: 0 0 0 -30px;
             color: white;
@@ -88,13 +94,13 @@
         .Container {
           margin-top: 50px;
     
-          .BusinessCard,
-          .PersonalCard {
+          .AfterPresale,
+          .BeforePresale {
             margin: 0;
             width: 100%;
           }
     
-          .BusinessCard {
+          .AfterPresale {
             margin-bottom: 50px;
             padding: 20px !important;
             h2{
@@ -114,7 +120,7 @@
         }
     
         .Container {    
-          .BusinessCard {
+          .AfterPresale {
             margin-bottom: 30px;
             padding: 0 !important;
             h2{
@@ -130,7 +136,7 @@
             }
           }
 
-          .PersonalCard {
+          .BeforePresale {
             margin-bottom: 50px;
             h2{
                 font-size: 16px;
@@ -161,7 +167,7 @@
             display: flex;
             flex-direction: column;
             padding: 20px !important;   
-          .BusinessCard {
+          .AfterPresale {
             margin: 20px 0;
             h2{
                 font-size: 16px;
@@ -176,7 +182,7 @@
             }
           }
 
-          .PersonalCard {
+          .BeforePresale {
             margin: 20px 0;
             padding: 20px !important;
             h2{

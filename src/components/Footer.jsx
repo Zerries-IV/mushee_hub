@@ -6,12 +6,11 @@ import "./styles/Footer.scss"
 
 const TelegramIcon = 'https://img.icons8.com/ios-filled/949494/20/telegram-app.png'
 const TwitterIcon = 'https://img.icons8.com/ios-filled/949494/20/null/twitter.png'
-const RedditIcon = 'https://img.icons8.com/ios-glyphs/949494/20/reddit.png'
 const YoutubeIcon = 'https://img.icons8.com/ios-filled/949494/20/youtube-play--v1.png'
 
 const SUPPORT_LINKS = [
     {
-        href: '/',
+        href: 'https://t.me/musheechat',
         link: 'Telegram'
     },
     {
@@ -69,23 +68,23 @@ const SOCIALS = [
     {
         name: 'telegram',
         src: `${TelegramIcon}`,
-        hrf: ''
-    },
-    {
-        name: 'github',
-        src: `${RedditIcon}`,
-        hrf: ''
-    },
+        hrf: 'https://t.me/musheechat'
+    },    
     {
         name: 'twitter',
         src: `${TwitterIcon}`,
-        hrf: ''
+        hrf: 'https://twitter.com/musheewallet'
     },
     {
         name: 'youtube',
         src: `${YoutubeIcon}`,
         hrf: ''
-    }
+    },
+    {
+        name: 'telegram',
+        src: `${TelegramIcon}`,
+        hrf: 'https://t.me/musheewallet'
+    },
 ]
 
 export function Socials(){
@@ -112,7 +111,7 @@ const FooterBottom = () => {
             <Socials />
             <div className='BottomText'>
                 <h5>Terms of use </h5>
-                <p>Ⓒ 2023 Mushee. All Rights Reserved </p>
+                <p>Ⓒ 2021 Mushee. All Rights Reserved </p>
             </div>
         </div>
     )

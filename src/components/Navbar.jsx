@@ -26,7 +26,7 @@ export const NAVBAR_LINKS = [
         link: 'Whitepaper'
     },
     {
-        href: '#FAQ',
+        href: 'https://mushee.gitbook.io/mushee/mushee-base/security-and-mushee',
         link: 'FAQ'
     },
 ]

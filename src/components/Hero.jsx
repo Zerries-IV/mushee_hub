@@ -8,31 +8,31 @@ const HomeHeroText = () => {
     return (
         <div className='HomeHero_Text'>
             <h1>
-                Accept Crypto Payments with<br />Mushee
+                Decentralized wallet platform <br />with Mushee
             </h1>
-            <p>Mushee provides access to useful tools for business and private use.
-            <br />Accept and receive crypto payments easily with our crypto gateway.</p>
+            <p>Mushee is building a decentralized ecosystem focusing on assets, identity, and socializing. 
+            <br />We are constantly building and expanding our scope to include more advanced DeFi </p>
             <ul>
                 <li> 
                     <ArrowDownward /> 
-                    <p>Low commission of 0.4%</p> 
+                    <p>Mushee is your wallet</p> 
                 </li>
                 <li> 
                     <Bolt /> 
-                    <p>Quick crypto transactions</p> 
+                    <p>Digital Asset</p> 
                 </li>
                 <li> 
                     <AccountBalanceWallet /> 
-                    <p>Easy crypto payment integration</p> 
+                    <p>Transaction Medium</p> 
                 </li>
                 <li> 
                     <Message /> 
-                    <p>Integration assistance</p> 
+                    <p>Social Tool</p> 
                 </li>
             </ul>
             <div className='AuthButton'>
-                <Button variant='primary' className="Button">Connect</Button>
-                <Button variant='outline-primary' className="Button">Contact us</Button> 
+                <Button variant='primary' className="Button" href='https://mushee.gitbook.io/mushee/tokenomics-and-roadmap/mushee-token'>Token information</Button>
+                <Button variant='outline-primary' className="Button" href='https://bscscan.com/token/0x6e937ec2a209060278f591b026b386db0c7b88d0'>BSC scan</Button> 
             </div>
         </div>
     )
@@ -40,7 +40,7 @@ const HomeHeroText = () => {
 
 const HomeHeroImg = () => {
     return (
-        <img alt='mushee' srcSet='' src='https://cryptomus.com/img/title-phone-dark.png' />
+        <img alt='mushee' className='HomeHero_Img' srcSet='' src='https://1118740874-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIIgoyPe5vwhGAXRZWQIA%2Fuploads%2FF3fUjvUqoKJJVs7SZomr%2FIMG_20230222_171353_660.jpg?alt=media&token=89ca6311-c011-4b22-8d3f-154137843199' />
     )
 }
 

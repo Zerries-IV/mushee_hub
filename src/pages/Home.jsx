@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar';
 import HomeHero from '../components/Hero';
 import Plans from '../components/Plans';
-import Solution from '../components/Solution';
+import Staking from '../components/Staking';
 import Contact, { Cryptocurency } from '../components/Contact';
 import Mushee from '../components/Mushee';
 import Footer from '../components/Footer';
@@ -13,7 +13,7 @@ function Home() {
       <Navbar />
       <HomeHero />
       <Plans />
-      <Solution />
+      <Staking />
       <Contact />
       <Cryptocurency />
       <Mushee />

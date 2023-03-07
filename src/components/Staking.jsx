@@ -1,45 +1,45 @@
 import React from 'react'
 import { LaptopChromebook, Telegram, Storefront, BookOnline, WarningAmberRounded, SportsEsportsRounded } from '@mui/icons-material'
-import "./styles/Solution.scss"
+import "./styles/Staking.scss"
 
 const LIST = [
     {
         icon: <LaptopChromebook className='muiIcon'/>,
-        text: 'Online Services',
-        subText: 'Easily accept payments for subscriptions and services'
+        text: 'Mushee staking',
+        subText: 'Easily stake mushee for gains and more'
     },
     {
         icon: <Telegram className='muiIcon'/>,
-        text: 'Telegram bots',
-        subText: 'Fully automated payment system for bots – could you imagine something more convenient?'
+        text: 'Reward pool',
+        subText: 'Interest earned on reward pools are distributed among the participants of the pool.'
     },
     {
         icon: <Storefront className='muiIcon'/>,
-        text: 'E-commerce',
-        subText: 'Attract new customers with an unusual payment method'
+        text: 'Automate farming',
+        subText: 'Smart contracts and automated tools to perform yield farming and liquidity mining on behalf of users.'
     },
     {
         icon: <BookOnline className='muiIcon'/>,
-        text: 'Online schools',
-        subText: 'Selling educational courses with our solution is as simple as it is possible'
+        text: 'Governance features',
+        subText: 'Users of mushee, participate in the decision-making processes that govern the network'
     },
     {
         icon: <WarningAmberRounded className='muiIcon'/>,
-        text: 'High-risk projects ?',
+        text: 'Achievement & NFT',
         subText: 'Offer your clients an alternative to fiat payments'
     },
     {
         icon: <SportsEsportsRounded className='muiIcon'/>,
-        text: 'Gaming service',
-        subText: 'Sell video games and in-game items with crypto with no extra fees'
+        text: 'User Profile',
+        subText: 'Information to describe users on a mushee.'
     },
 ]
 
-const Solution = () => {
+const Staking = () => {
   return (
-    <div className='Solution'>
-        <h1>Mushee - one solution<br /> for many businesses</h1>
-        <div className='SolutionList'>
+    <div className='Staking'>
+        <h1>Mushee - Staking</h1>
+        <div className='StakingList'>
             {
                 LIST.map(list => {
                     return(
@@ -58,4 +58,4 @@ const Solution = () => {
   )
 }
 
-export default Solution
+export default Staking

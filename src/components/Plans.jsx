@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
 import "./styles/Plans.scss"
-import { CheckCircle, BoltRounded, ShieldMoonRounded } from '@mui/icons-material'
+import { CheckCircle, BoltRounded, ShieldMoonRounded, Circle } from '@mui/icons-material'
 
 export const CryptoForBusiness = () => {
   return(
@@ -46,52 +46,191 @@ const CardSecure = () => {
   )
 }
 
-const BusinessSolution = () => {
+const AFTERPRESALE = [
+  {
+    icon: <Circle />,
+    text: 'Pre-sale'
+  },
+  {
+    icon: <Circle />,
+    text: 'Launch Pancakeswap'
+  },
+  {
+    icon: <Circle />,
+    text: 'Updates on wallets logos and price track'    
+  },
+  {
+    icon: <Circle />,
+    text: 'Exchange listing I'
+  },
+  {
+    icon: <Circle />,
+    text: 'Publication of news articles and advertisement '
+  },
+  {
+    icon: <Circle />,
+    text: ' Exchange listing II '
+  },
+  {
+    icon: <Circle />,
+    text: 'Listing Mushee on Coingecko, Coinmarketcap '
+  },
+  {
+    icon: <Circle />,
+    text: 'Listing Mushee on data tracking sites.'
+  },
+  {
+    icon: <Circle />,
+    text: 'Forge more cooperation I '
+  },
+  {
+    icon: <Circle />,
+    text: 'Publication of the Mushee light wallet on Google Play '
+  },
+  {
+    icon: <Circle />,
+    text: 'Exchange listing III'
+  },
+  {
+    icon: <Circle />,
+    text: 'Publication of a Mushee update on Google Play and Appstore'
+  },
+  {
+    icon: <Circle />,
+    text: 'Forge more cooperations II'
+  },
+  {
+    icon: <Circle />,
+    text: 'Partnership with Dex services '
+  },
+  {
+    icon: <Circle />,
+    text: 'Website updates'
+  },
+  {
+    icon: <Circle />,
+    text: 'Highlight plan for the year announcements'
+  },
+  {
+    icon: <Circle />,
+    text: 'Exchange listing IV'
+  },
+  {
+    icon: <Circle />,
+    text: 'Add Mushee launchpad to Mushee wallet'
+  },
+  {
+    icon: <Circle />,
+    text: 'Add Swap, Earn to Mushee wallet'
+  },
+  {
+    icon: <Circle />,
+    text: 'Mushee launchpad {Pending testing}'
+  },
+  {
+    icon: <Circle />,
+    text: 'Mushee P2P {Pending testing}'
+  },
+  {
+    icon: <Circle />,
+    text: 'Partnership ENS Domain {Pending}'
+  },
+  {
+    icon: <Circle />,
+    text: 'Summarizing and planning'
+  },
+  {
+    icon: <Circle />,
+    text: 'Mushee madness {Pending}'
+  },
+  {
+    icon: <Circle />,
+    text: 'Exchange listing V'
+  },
+  {
+    icon: <Circle />,
+    text: 'Forge more cooperations III'
+  },
+  {
+    icon: <Circle />,
+    text: 'Mushee Integration Payer - P2P platform'
+  },
+  {
+    icon: <Circle />,
+    text: 'Cross-chain transactions'
+  },
+  {
+    icon: <Circle />,
+    text: 'More DApps in Services and options for sponsoring'
+  },
+  {
+    icon: <Circle />,
+    text: 'Exploring exchange listing & Community options'
+  },
+]
+
+const AfterPresale = () => {
+  const [ more, setMore ] = useState(10);
+
+  const handleMore = (e) => {
+    e.preventDefault();
+    setMore(more + 5);    
+  }
+
+  const handleLess = (e) => {
+    e.preventDefault();
+    setMore( more - 20)
+
+  }
   return(
-    <div className='BusinessCard'>
+    <div className='AfterPresale'>
       <h2> Solutions for Business </h2>
       <ul>
-        <li>
-          <CheckCircle />
-          <p> Accept crypto directly in your physical stores with QR code or payment link</p>
-        </li>
-        <li>  
-          <CheckCircle />
-          <p> Convert your crypto with the Auto-convert feature to protect your funds from volatility</p>
-        </li>
-        <li>
-          <CheckCircle /> 
-          <p> Safety first: flexible 2FA, Whitelist, Auto-Withdrawal and other features to keep your funds safe</p>
-        </li>
-        <li>
-          <CheckCircle />
-          <p> Go global: accept payments from your international customers</p>
-        </li>
+        {
+          AFTERPRESALE.slice(0, more).map( afterpresale => (
+            <li>
+              {afterpresale.icon}       
+              <p>{afterpresale.text}</p>
+            </li>
+          ))
+        }   
+        <Button variant='outline-primary' className='More' onClick={
+          more === 30 ? handleLess : handleMore
+        }>{
+          more === 30 ? <em>less</em> : <em>more</em>
+        }</Button>    
       </ul>
-      <Button variant='primary' className='Button'>Sign Up</Button>
     </div>
   )
 }
 
-const PersonalService = () => {
+const BeforePresale = () => {
   return(
-    <div className='PersonalCard'>
-      <h2> Personal Service </h2>
+    <div className='BeforePresale'>
+      <h2> Before Presale </h2>
       <ul>
         <li>
         <CheckCircle />
-        <p> Make it convenient for you - keep your crypto funds in one place</p>
+        <p> Creation of token </p>
         </li>
         <li>
         <CheckCircle />
-        <p> All of the most popular cryptocurrencies on one platform</p>
+        <p> Whitepaper and roadmap highlights </p>
         </li>
         <li>
         <CheckCircle />
-        <p> Crypto shopping: pay for everyday purchases with digital currency</p>
+        <p> Contract verification </p>
         </li>
+        <li>
+        <Circle />
+        <p> Token Audit </p>
+        </li>
+        <li>
+        <Circle />
+        <p> Partnerships & News articles  </p>
+        </li>        
       </ul>
-      <Button variant='primary' className='Button'>Sign Up</Button>
+      <Button variant='primary' className='Button' href='https://mushee.gitbook.io/mushee/tokenomics-and-roadmap/presale-plan'>Presale page</Button>
     </div>
   )
 }
@@ -99,11 +238,11 @@ const PersonalService = () => {
 const Plans = () => {
   return (
     <header className='Plans'>
-      <h1>Everything you need to get paid</h1>
-      <h5>We have a diverse set of solutions for both business and personal use. Everyone will find what they need</h5>
+      <h1>Presale Plan</h1>
+      <h5>We have a diverse set of plans for both before and after presale. Everyone would get what they need</h5>
       <div className='Container'>
-        <BusinessSolution />
-        <PersonalService />
+        <AfterPresale />
+        <BeforePresale />
       </div>
     </header>
   )
