@@ -69,7 +69,7 @@ const AFTERPRESALE = [
   },
   {
     icon: <Circle />,
-    text: ' Exchange listing II '
+    text: 'Exchange listing II '
   },
   {
     icon: <Circle />,
@@ -85,7 +85,7 @@ const AFTERPRESALE = [
   },
   {
     icon: <Circle />,
-    text: 'Publication of the Mushee light wallet on Google Play '
+    text: 'Mushee light wallet on Google Play '
   },
   {
     icon: <Circle />,
@@ -93,7 +93,7 @@ const AFTERPRESALE = [
   },
   {
     icon: <Circle />,
-    text: 'Publication of a Mushee update on Google Play and Appstore'
+    text: 'Mushee update on Google Play and Appstore'
   },
   {
     icon: <Circle />,
