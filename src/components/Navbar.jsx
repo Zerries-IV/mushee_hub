@@ -12,15 +12,17 @@ export const Logo = () => {
     )
 }
 
+// {
+//         href: '/businesses',
+//         link: 'Businesses'
+//},
+
 export const NAVBAR_LINKS = [
     {
         href: '/',
         link: 'Home'
     },
-    {
-        href: '/businesses',
-        link: 'Businesses'
-    },
+    
     {
         href: 'https://mushee.gitbook.io/mushee',
         link: 'Whitepaper'
