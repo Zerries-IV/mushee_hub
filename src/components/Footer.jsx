@@ -6,7 +6,6 @@ import "./styles/Footer.scss"
 
 const TelegramIcon = 'https://img.icons8.com/ios-filled/949494/20/telegram-app.png'
 const TwitterIcon = 'https://img.icons8.com/ios-filled/949494/20/null/twitter.png'
-const YoutubeIcon = 'https://img.icons8.com/ios-filled/949494/20/youtube-play--v1.png'
 
 const SUPPORT_LINKS = [
     {
@@ -66,24 +65,19 @@ const FooterTop = () => {
 
 const SOCIALS = [
     {
-        name: 'telegram',
+        name: 'telegram-chat',
         src: `${TelegramIcon}`,
-        hrf: 'https://t.me/musheechat'
+        hrf: 'https://t.me/musheehub'
     },    
     {
         name: 'twitter',
         src: `${TwitterIcon}`,
-        hrf: 'https://twitter.com/musheewallet'
+        hrf: 'https://twitter.com/musheehub'
     },
     {
-        name: 'youtube',
-        src: `${YoutubeIcon}`,
-        hrf: ''
-    },
-    {
-        name: 'telegram',
+        name: 'telegram-channel',
         src: `${TelegramIcon}`,
-        hrf: 'https://t.me/musheewallet'
+        hrf: 'https://t.me/musheehall'
     },
 ]
 
