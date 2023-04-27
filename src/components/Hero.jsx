@@ -15,24 +15,24 @@ const HomeHeroText = () => {
             <ul>
                 <li> 
                     <ArrowDownward /> 
-                    <p>Mushee is your wallet</p> 
+                    <p>Tokens For Presale: 240,000MSH </p> 
                 </li>
                 <li> 
                     <Bolt /> 
-                    <p>Digital Asset</p> 
+                    <p>Initial Marketcap (estimate): $98,431</p> 
                 </li>
                 <li> 
                     <AccountBalanceWallet /> 
-                    <p>Transaction Medium</p> 
+                    <p>Soft cap:  30BNB</p> 
                 </li>
                 <li> 
                     <Message /> 
-                    <p>Social Tool</p> 
+                    <p>Presale Ends: 29-04-23 00:00</p> 
                 </li>
             </ul>
             <div className='AuthButton'>
                 <Button variant='primary' className="Button" href='https://mushee.gitbook.io/mushee/tokenomics-and-roadmap/mushee-token'>Token information</Button>
-                <Button variant='outline-primary' className="Button" href='https://bscscan.com/token/0x6e937ec2a209060278f591b026b386db0c7b88d0'>BSC scan</Button> 
+                <Button variant='outline-primary' className="Button" href='https://www.pinksale.finance/launchpad/0x6C05D1A3B0dbb890bb32f36ba13b6957ed18EA0E?chain=BSC'>Presale information</Button> 
             </div>
         </div>
     )
