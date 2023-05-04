@@ -1,4 +1,3 @@
-import React from 'react'
 import "./styles/Hero.scss"
 import Button from 'react-bootstrap/Button'
 import { Bolt, ArrowDownward, AccountBalanceWallet, Message } from '@mui/icons-material';
@@ -27,12 +26,12 @@ const HomeHeroText = () => {
                 </li>
                 <li> 
                     <Message /> 
-                    <p>Presale Ends: 29-04-23 00:00</p> 
+                    <p>Presale Ends: ENDED</p> 
                 </li>
             </ul>
             <div className='AuthButton'>
                 <Button variant='primary' className="Button" href='https://mushee.gitbook.io/mushee/tokenomics-and-roadmap/mushee-token'>Token information</Button>
-                <Button variant='outline-primary' className="Button" href='https://www.pinksale.finance/launchpad/0x6C05D1A3B0dbb890bb32f36ba13b6957ed18EA0E?chain=BSC'>Presale information</Button> 
+                <Button variant='outline-primary' className="Button" href='#'>Presale information</Button> 
             </div>
         </div>
     )

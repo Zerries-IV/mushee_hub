@@ -1,6 +1,5 @@
 import { DownloadDoneRounded, ReduceCapacityRounded, ShuffleOnRounded, TouchAppRounded,Rotate90DegreesCwOutlined, MarkChatReadRounded, PercentRounded, DownloadDoneOutlined, MasksOutlined } from '@mui/icons-material'
 import { Box } from '@mui/material'
-import React from 'react'
 import "./styles/BusinessComponents.scss"
 
 const HOWTO = [
@@ -36,9 +35,9 @@ const HowTo = () => {
         <h1>How to accept crypto payments?</h1>
             <div className='AnswersWrap'>
                 {
-                    HOWTO.map(reply => {
+                    HOWTO.map((reply, index) => {
                         return(
-                            <div className='Answers'>
+                            <div className='Answers' key={index}>
                                 <h2>{reply.text}</h2>
                                 <p>{reply.subText}</p>
                             </div>

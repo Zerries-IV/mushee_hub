@@ -1,4 +1,3 @@
-import React from 'react'
 import { Button, Form } from 'react-bootstrap'
 import "./styles/Contact.scss"
 import { AutoAwesomeRounded, SettingsRounded, CheckCircleOutlineOutlined, MessageRounded, FreeBreakfast } from '@mui/icons-material'

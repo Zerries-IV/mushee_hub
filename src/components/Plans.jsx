@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Button } from 'react-bootstrap'
 import "./styles/Plans.scss"
 import { CheckCircle, BoltRounded, ShieldMoonRounded, Circle } from '@mui/icons-material'
@@ -187,13 +187,13 @@ const AfterPresale = () => {
       <h2> Solutions for Business </h2>
       <ul>
         {
-          AFTERPRESALE.slice(0, more).map( afterpresale => (
-            <li>
+          AFTERPRESALE.slice(0, more).map( (afterpresale, index) => (
+            <li key={index}>
               {afterpresale.icon}       
               <p>{afterpresale.text}</p>
             </li>
           ))
-        }   
+        }
         <Button variant='outline-primary' className='More' onClick={
           more === 30 ? handleLess : handleMore
         }>{

@@ -1,4 +1,3 @@
-import React from 'react'
 import { LaptopChromebook, Telegram, Storefront, BookOnline, WarningAmberRounded, SportsEsportsRounded } from '@mui/icons-material'
 import "./styles/Staking.scss"
 

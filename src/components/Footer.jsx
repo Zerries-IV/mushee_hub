@@ -1,7 +1,7 @@
-import React from 'react'
 import { Nav } from 'react-bootstrap'
-import { Logo, NAVBAR_LINKS } from './Navbar'
+import { Logo } from './Navbar'
 import { Divider } from '@mui/material'
+import { NAVBAR_LINKS } from '../Constants'
 import "./styles/Footer.scss"
 
 const TelegramIcon = 'https://img.icons8.com/ios-filled/949494/20/telegram-app.png'

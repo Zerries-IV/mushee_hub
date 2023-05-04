@@ -1,4 +1,3 @@
-import React from 'react'
 import { Button } from 'react-bootstrap'
 import "./styles/Mushee.scss"
 import {  ChatBubbleOutlineRounded, ArrowUpwardRounded, ShieldRounded, Shop2Rounded } from '@mui/icons-material'

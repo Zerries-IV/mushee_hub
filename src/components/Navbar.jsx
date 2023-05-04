@@ -1,8 +1,7 @@
-// import Button from 'react-bootstrap/Button'
-import React from 'react'
 import "./styles/Navbar.scss"
 import { Nav } from 'react-bootstrap'
-import { Socials } from './Footer'
+import { Socials } from './Footer.jsx'
+import {NAVBAR_LINKS} from '../Constants'
 
 const LOGO_URL = 'https://raw.githubusercontent.com/nnoromiv/mushee/master/public/images/mushee.jpg'
 
@@ -11,27 +10,6 @@ export const Logo = () => {
         <img src={LOGO_URL} alt="logo" srcSet="" className='LogoImage'/>
     )
 }
-
-// {
-//         href: '/businesses',
-//         link: 'Businesses'
-//},
-
-export const NAVBAR_LINKS = [
-    {
-        href: '/',
-        link: 'Home'
-    },
-    
-    {
-        href: 'https://mushee.gitbook.io/mushee',
-        link: 'Whitepaper'
-    },
-    {
-        href: 'https://mushee.gitbook.io/mushee/mushee-base/security-and-mushee',
-        link: 'FAQ'
-    },
-]
 
 const NavLinks = () => {
     return (
