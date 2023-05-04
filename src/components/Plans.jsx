@@ -222,7 +222,7 @@ const BeforePresale = () => {
         <p> Contract verification </p>
         </li>
         <li>
-        <Circle />
+        <CheckCircle />
         <p> Token Audit </p>
         </li>
         <li>
