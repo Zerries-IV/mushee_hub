@@ -3,7 +3,7 @@ import { Nav } from 'react-bootstrap'
 import { Socials } from './Footer.jsx'
 import {NAVBAR_LINKS} from '../Constants'
 
-const LOGO_URL = 'https://raw.githubusercontent.com/nnoromiv/mushee/master/public/images/mushee.jpg'
+const LOGO_URL = 'https://raw.githubusercontent.com/nnoromiv/mushee/master/src/assets/mushee.jpg'
 
 export const Logo = () => {
     return (
