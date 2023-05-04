@@ -1,13 +1,13 @@
-import { Button } from 'react-bootstrap'
 import "./styles/Mushee.scss"
 import {  ChatBubbleOutlineRounded, ArrowUpwardRounded, ShieldRounded, Shop2Rounded } from '@mui/icons-material'
+// import { Button } from 'react-bootstrap'
 
 const Affiliate = () => {
   return(
     <div className='AffiliateCard'>
       <h2> Abstract </h2>
         <p>Bitcoin, Ethereum, and various derivative digital assets with Blockchain as their underlying technology have experienced explosive growth. Over 1,300 kinds of digital assets are now available for trading on the global market, with a total economic volume of more than $991 billion, which is still growing exponentially, with huge market potential</p>
-      <Button variant='primary' className='Button' href='https://mushee.gitbook.io/mushee/abstract'>Read more...</Button>
+      {/* <Button variant='primary' className='Button' href=''>Read more...</Button> */}
     </div>
   )
 }
@@ -35,9 +35,9 @@ const Service = () => {
         <p> Decentralised loans </p>
         </li>
       </ul>
-      <div className='AuthButton'>
-            <Button variant='outline-primary' className="Button" href='https://mushee.gitbook.io/mushee/features'>Read more...</Button> 
-        </div>
+      {/* <div className='AuthButton'>
+            <Button variant='outline-primary' className="Button" href=''>Read more...</Button> 
+        </div> */}
     </div>
   )
 }

@@ -230,7 +230,7 @@ const BeforePresale = () => {
         <p> Partnerships & News articles  </p>
         </li>        
       </ul>
-      <Button variant='primary' className='Button' href='https://mushee.gitbook.io/mushee/tokenomics-and-roadmap/presale-plan'>Presale page</Button>
+      {/* <Button variant='primary' className='Button' href=''>Presale page</Button> */}
     </div>
   )
 }

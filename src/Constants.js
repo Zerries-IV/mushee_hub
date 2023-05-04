@@ -5,11 +5,11 @@ const NAVBAR_LINKS = [
     },
     
     {
-        href: 'https://mushee.gitbook.io/mushee',
-        link: 'Whitepaper'
+        href: 'https://bscscan.com/token/0x6e937ec2a209060278f591b026b386db0c7b88d0',
+        link: 'BSC SCAN'
     },
     {
-        href: 'https://mushee.gitbook.io/mushee/mushee-base/security-and-mushee',
+        href: '#',
         link: 'FAQ'
     },
 ]

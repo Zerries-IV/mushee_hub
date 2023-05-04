@@ -30,8 +30,8 @@ const HomeHeroText = () => {
                 </li>
             </ul>
             <div className='AuthButton'>
-                <Button variant='primary' className="Button" href='https://mushee.gitbook.io/mushee/tokenomics-and-roadmap/mushee-token'>Token information</Button>
-                <Button variant='outline-primary' className="Button" href='#'>Presale information</Button> 
+                {/* <Button variant='primary' className="Button" href=''>Token information</Button> */}
+                <Button variant='outline-primary' className="Button" href='https://bscscan.com/token/0x6e937ec2a209060278f591b026b386db0c7b88d0'>BSC SCAN</Button> 
             </div>
         </div>
     )
