@@ -73,7 +73,7 @@ const TokenSale = () => {
     };
 
     const handleBuy = (values) => {
-        buyMushee(Number(values.TokenPrice)* 1e5);
+        buyMushee(values.TokenPrice);
     }
 
     function countdown() {
