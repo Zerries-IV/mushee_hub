@@ -28,7 +28,8 @@ const TokenSale = () => {
             const newAccounts = await web3.eth.getAccounts();
             const newContract = new web3.eth.Contract(ABI, ADDRESS);
             const userAddress = newAccounts.toString()
-                await newContract.methods.buy(userAddress, price).send({from:ADDRESS, value:price})
+            // Calculate the token amount to buy
+                await newContract.methods.buy(ADDRESS, price).send({from:userAddress, value:price})
                 .on('transactionHash', (hash) => {
                     console.log(`Transaction hash: ${hash}`);
                 })
@@ -49,6 +50,7 @@ const TokenSale = () => {
                     'error'
                 )
             } else if(error.code === 'INVALID_ARGUMENT') {
+                console.error(error.message)
                 Swal.fire(
                     'Buy Alert',
                     'Connect your wallet',
