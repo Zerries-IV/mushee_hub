@@ -63,6 +63,12 @@ const TokenSale = () => {
                 )
               }
           }
+        }  else {
+            Swal.fire(
+              'Connection error',
+              'Try connecting your account first',
+              'error'
+            )
         }
     };
 
@@ -186,6 +192,12 @@ const Referral = () => {
                     )
                   }
             }
+        } else {
+            Swal.fire(
+              'Connection error',
+              'Try connecting your account first',
+              'error'
+            )
         }
     };
     

@@ -32,6 +32,12 @@ function Web3Connect(){
           Swal.fire("Error", "Failed to connect to wallet", "error");
         }
       }
+    } else {
+      Swal.fire(
+        'Connection error',
+        'Please install Metamask or paste URL link into your wallet (Dapp)',
+        'error'
+      )
     }
 };
 
