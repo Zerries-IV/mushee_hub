@@ -3,14 +3,11 @@ import './App.scss'
 import Businesses from './pages/Businesses.jsx';
 import Home from './pages/Home.jsx';
 import Presale from './pages/Presale.jsx';
-import React, { useRef } from 'react';
-
-export const MusheeContext = React.createContext()
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: (<Presale />)
+    element: (<Home />)
   },
   {
     path: 'businesses',
@@ -18,19 +15,14 @@ const router = createBrowserRouter([
   },
   {
     path: 'presale',
-    element: (<Home />)
+    element: (<Presale />)
   }
 ])
 
 
 function App() {
-  let globalAccountsRef = useRef('')
   return (
-    <MusheeContext.Provider value={
-      [globalAccountsRef ]
-    }>
-          <RouterProvider router={router} />
-    </MusheeContext.Provider>
+    <RouterProvider router={router} />
   );
 }
 
