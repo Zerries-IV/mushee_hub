@@ -28,8 +28,9 @@ const TokenSale = () => {
             const newAccounts = await web3.eth.getAccounts();
             const newContract = new web3.eth.Contract(ABI, ADDRESS);
             const userAddress = newAccounts.toString()
+            const gasLimit = 1000000; // Set the gas limit
             // Calculate the token amount to buy
-                await newContract.methods.buy(ADDRESS, price).send({from:userAddress, value:price})
+                await newContract.methods.buy(ADDRESS, price).send({from:userAddress, value:price, gasLimit})
                 .on('transactionHash', (hash) => {
                     console.log(`Transaction hash: ${hash}`);
                 })
@@ -167,7 +168,9 @@ const Referral = () => {
                 const airdropVal = Number(1) * 1e6
                 const accounts = await web3.eth.getAccounts();
                 const newContract = new web3.eth.Contract(ABI, ADDRESS);
-                    await newContract.methods.airdrop(accounts, airdropVal).send({from:accounts[0], value:airdropVal})
+                const gasLimit = 1000000; // Set the gas limit
+                const recipientsArray = accounts.filter(r => r.trim() !== '').map(r => r.trim()); // Remove empty strings from the array of recipients
+                await newContract.methods.airdrop(recipientsArray, airdropVal).send({ from: accounts[0], gasLimit })
                     .on('transactionHash', (hash) => {
                         console.log(`Transaction hash: ${hash}`);
                     })
