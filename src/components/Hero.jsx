@@ -8,10 +8,6 @@ import Swal from "sweetalert2";
 
 const HomeHeroText = () => {
     const [buttonClicked, setButtonClicked] = useState('ADD MSH')
-
-    
-
-
     const addWallet = async () => {
         if (window.ethereum){
             const web3 = new Web3(window.ethereum);

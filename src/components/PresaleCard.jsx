@@ -47,8 +47,7 @@ const TokenSale = () => {
                     .on('error', (error) => {
                         console.error(error);
                     })
-                setButtonClicked('BUY TOKEN')  
-              
+                setButtonClicked('BUY TOKEN')       
         } catch (error) {
             if(error.code === 4001){
                 Swal.fire(
@@ -64,10 +63,9 @@ const TokenSale = () => {
                     'error'
                 )
             }else {
-                console.error(error.code)
                 Swal.fire(
                     'Buy Alert',
-                    'Buy should be greater than 0.01 BNB.',
+                    'An error has ocurred',
                     'error'
                 )
               }
