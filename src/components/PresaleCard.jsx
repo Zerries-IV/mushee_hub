@@ -26,28 +26,31 @@ const TokenSale = () => {
             setButtonClicked('LOADING...')
             await window.ethereum.request({ method: 'eth_requestAccounts' });
             const connectId = await web3.eth.getChainId();
-            if (connectId !== 56)
+            if (connectId !== 56){
               Swal.fire(
                 'Connect Alert',
                 'Please Connect on Smart Chain',
                 'error'
               )
-            const newAccounts = await web3.eth.getAccounts();
-            const newContract = new web3.eth.Contract(ABI, ADDRESS);
-            const userAddress = newAccounts.toString()
-            const gasLimit = 1000000; // Set the gas limit
-                await newContract.methods.buyMSH(price).send({from:userAddress, value:price, gasLimit})
-                .on('transactionHash', (hash) => {
-                    console.log(`Transaction hash: ${hash}`);
-                })
-                .on('confirmation', (confirmationNumber, receipt) => {
-                    console.log(`Confirmation number: ${confirmationNumber}`);
-                    console.log(`Receipt: ${receipt}`);
-                })
-                .on('error', (error) => {
-                    console.error(error);
-                })
             setButtonClicked('BUY TOKEN')  
+            } else {
+                const newAccounts = await web3.eth.getAccounts();
+                const newContract = new web3.eth.Contract(ABI, ADDRESS);
+                const userAddress = newAccounts.toString()
+                const gasLimit = 1000000; // Set the gas limit
+                    await newContract.methods.buyMSH(price).send({from:userAddress, value:price, gasLimit})
+                    .on('transactionHash', (hash) => {
+                        console.log(`Transaction hash: ${hash}`);
+                    })
+                    .on('confirmation', (confirmationNumber, receipt) => {
+                        console.log(`Confirmation number: ${confirmationNumber}`);
+                        console.log(`Receipt: ${receipt}`);
+                    })
+                    .on('error', (error) => {
+                        console.error(error);
+                    })
+                setButtonClicked('BUY TOKEN')  
+              }
         } catch (error) {
             setButtonClicked('BUY TOKEN')  
             if(error.code === 4001){
@@ -172,28 +175,29 @@ const Referral = () => {
             try {
                 await window.ethereum.request({ method: 'eth_requestAccounts' });
                 const connectId = await web3.eth.getChainId();
-                if (connectId !== 56)
+                if (connectId !== 56){
                   Swal.fire(
                     'Connect Alert',
                     'Please Connect on Smart Chain',
                     'error'
-                  )
-                const airdropVal = Number(1) * 1e6
-                const accounts = await web3.eth.getAccounts();
-                const newContract = new web3.eth.Contract(ABI, ADDRESS);
-                const gasLimit = 1000000; // Set the gas limit
-                const recipientsArray = accounts.filter(r => r.trim() !== '').map(r => r.trim()); // Remove empty strings from the array of recipients
-                recipientsArray.forEach((recipient) => {
-                    const recipientString = String(recipient);
-                    newContract.methods.airdrop(recipientsArray, airdropVal).send({ from: recipientString, airdropVal, gasLimit })
-                    .on('transactionHash', (hash) => {
-                        console.log(`Transaction hash: ${hash}`);
-                    })
-                    .on('confirmation', (confirmationNumber, receipt) => {
-                        console.log(`Confirmation number: ${confirmationNumber}`);
-                        console.log(`Receipt: ${receipt}`);
-                    })
-                  });
+                  ) } else {
+                    const airdropVal = Number(1) * 1e6
+                    const accounts = await web3.eth.getAccounts();
+                    const newContract = new web3.eth.Contract(ABI, ADDRESS);
+                    const gasLimit = 1000000; // Set the gas limit
+                    const recipientsArray = accounts.filter(r => r.trim() !== '').map(r => r.trim()); // Remove empty strings from the array of recipients
+                    recipientsArray.forEach((recipient) => {
+                        const recipientString = String(recipient);
+                        newContract.methods.airdrop(recipientsArray, airdropVal).send({ from: recipientString, airdropVal, gasLimit })
+                        .on('transactionHash', (hash) => {
+                            console.log(`Transaction hash: ${hash}`);
+                        })
+                        .on('confirmation', (confirmationNumber, receipt) => {
+                            console.log(`Confirmation number: ${confirmationNumber}`);
+                            console.log(`Receipt: ${receipt}`);
+                        })
+                    });
+                  }
             } catch (error) {
                 if(error.code === 4001){
                     Swal.fire(
