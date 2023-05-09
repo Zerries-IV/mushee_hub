@@ -38,6 +38,12 @@
         font-weight: 600;
     }
 
+    .nav-item{
+        .active {
+            color: gray
+        }
+    }
+    
     @media (max-width: 382px) {
         .nav-link{
             margin: 5px 0;

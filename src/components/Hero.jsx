@@ -37,7 +37,7 @@ const HomeHeroText = () => {
     )
 }
 
-const HomeHeroImg = () => {
+export const HomeHeroImg = () => {
     return (
         <img alt='mushee' className='HomeHero_Img' srcSet='' src='https://1118740874-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIIgoyPe5vwhGAXRZWQIA%2Fuploads%2FF3fUjvUqoKJJVs7SZomr%2FIMG_20230222_171353_660.jpg?alt=media&token=89ca6311-c011-4b22-8d3f-154137843199' />
     )

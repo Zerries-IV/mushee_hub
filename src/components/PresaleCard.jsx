@@ -3,7 +3,6 @@ import "./styles/PresaleCard.scss"
 import { Button } from 'react-bootstrap'
 import * as Yup from 'yup';
 import { Formik, Form, Field } from "formik";
-import Web3Connect from "../web3";
 import { useState } from "react";
 import Swal from 'sweetalert2';
 import 'sweetalert2/src/sweetalert2.scss'
@@ -21,16 +20,23 @@ const TokenSchema = Yup.object().shape({
 const TokenSale = () => {
     const [buttonClicked, setButtonClicked] = useState('BUY TOKEN')
     const buyMushee = async (price) => {
-        const web3 = new Web3(window.ethereum)
         if (window.ethereum) {
+            const web3 = new Web3(window.ethereum)
         try {
             setButtonClicked('LOADING...')
+            await window.ethereum.request({ method: 'eth_requestAccounts' });
+            const connectId = await web3.eth.getChainId();
+            if (connectId !== 56)
+              Swal.fire(
+                'Connect Alert',
+                'Please Connect on Smart Chain',
+                'error'
+              )
             const newAccounts = await web3.eth.getAccounts();
             const newContract = new web3.eth.Contract(ABI, ADDRESS);
             const userAddress = newAccounts.toString()
             const gasLimit = 1000000; // Set the gas limit
-            // Calculate the token amount to buy
-                await newContract.methods.buy(ADDRESS, price).send({from:userAddress, value:price, gasLimit})
+                await newContract.methods.buyMSH(price).send({from:userAddress, value:price, gasLimit})
                 .on('transactionHash', (hash) => {
                     console.log(`Transaction hash: ${hash}`);
                 })
@@ -107,8 +113,7 @@ const TokenSale = () => {
   return(
     <div className='TokenSaleCard'>
       <h1> Presale </h1>
-      <Web3Connect />
-      <h2>Presale ends in</h2>
+      <p>Presale ends in</p>
       <h2 id='countdown'></h2>
         <p>Buy 0.01 BNB = 500 MSH</p>
         <Divider color='white'/>
@@ -162,15 +167,25 @@ const Referral = () => {
 
 
     const getAirdrop = async () => {
-        const web3 = new Web3(window.ethereum);
         if (window.ethereum){
+            const web3 = new Web3(window.ethereum);
             try {
+                await window.ethereum.request({ method: 'eth_requestAccounts' });
+                const connectId = await web3.eth.getChainId();
+                if (connectId !== 56)
+                  Swal.fire(
+                    'Connect Alert',
+                    'Please Connect on Smart Chain',
+                    'error'
+                  )
                 const airdropVal = Number(1) * 1e6
                 const accounts = await web3.eth.getAccounts();
                 const newContract = new web3.eth.Contract(ABI, ADDRESS);
                 const gasLimit = 1000000; // Set the gas limit
                 const recipientsArray = accounts.filter(r => r.trim() !== '').map(r => r.trim()); // Remove empty strings from the array of recipients
-                await newContract.methods.airdrop(recipientsArray, airdropVal).send({ from: accounts[0], gasLimit })
+                recipientsArray.forEach((recipient) => {
+                    const recipientString = String(recipient);
+                    newContract.methods.airdrop(recipientsArray, airdropVal).send({ from: recipientString, airdropVal, gasLimit })
                     .on('transactionHash', (hash) => {
                         console.log(`Transaction hash: ${hash}`);
                     })
@@ -178,9 +193,7 @@ const Referral = () => {
                         console.log(`Confirmation number: ${confirmationNumber}`);
                         console.log(`Receipt: ${receipt}`);
                     })
-                    .on('error', (error) => {
-                        console.error(error);
-                    });
+                  });
             } catch (error) {
                 if(error.code === 4001){
                     Swal.fire(
@@ -189,7 +202,6 @@ const Referral = () => {
                         'error'
                     )
                 } else {
-                    console.error(error)
                     Swal.fire(
                         'Buy Alert',
                         'Buy as low as 0.01 BNB.',
@@ -234,6 +246,9 @@ const Referral = () => {
     <div className='Referral'>
       <h2> Airdrop </h2>
       <p> Claim Airdrop or Buy MSH Tokens using your personal Referral Link</p>
+
+      {/* <h5 style={{color: 'red'}}>Visit our telegram bot to participate</h5> */}
+
       <Formik initialValues={{
             address: ''
         }}

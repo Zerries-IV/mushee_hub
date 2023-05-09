@@ -10,7 +10,7 @@ import './Pages.scss'
 function Home() {
   return (
     <div className="Home">
-      <Navbar />
+      <Navbar navActive='/'/>
       <HomeHero />
       <Plans />
       <Staking />

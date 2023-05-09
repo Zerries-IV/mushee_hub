@@ -6,7 +6,7 @@ import PresaleCard from '../components/PresaleCard';
 function Businesses() {
   return (
     <div className='Businesses'>
-        <Navbar />
+        <Navbar navActive='presale'/>
         <PresaleCard />
         <Footer />
     </div>
