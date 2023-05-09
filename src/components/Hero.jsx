@@ -4,65 +4,52 @@ import { Bolt, ArrowDownward, AccountBalanceWallet, Message } from '@mui/icons-m
 import { useState } from "react";
 import Web3 from "web3";
 import Swal from "sweetalert2";
-import { ADDRESS } from "../Constants";
 
 
 const HomeHeroText = () => {
     const [buttonClicked, setButtonClicked] = useState('ADD MSH')
 
+    
+
+
     const addWallet = async () => {
         if (window.ethereum){
             const web3 = new Web3(window.ethereum);
-            setButtonClicked('ADDING...')
-            await window.ethereum.request({ method: 'eth_requestAccounts' });
-            const connectId = await web3.eth.getChainId();
-            if (connectId === 56){
-                try {
-                    web3.currentProvider.sendAsync({
-                        method: 'wallet_watchAsset',
-                        params: {
-                            'type': 'BEP20',
-                            'options': {
-                            'address': ADDRESS,
-                            'symbol': 'MSH',
-                            'decimals': '18',
-                            'image': 'https://raw.githubusercontent.com/nnoromiv/mushee/master/src/assets/mushee.jpg',
-                            },
+            try {
+                setButtonClicked('ADDING...')
+                await window.ethereum.request({ method: 'eth_requestAccounts' });
+                  web3.currentProvider.sendAsync({
+                    method: 'wallet_watchAsset',
+                    params: {
+                        'type': 'ERC20',
+                        'options': {
+                        'address': '0x6e937ec2a209060278f591b026b386db0c7b88d0',
+                        'symbol': 'MSH',
+                        'decimals': '18',
+                        'image': 'https://raw.githubusercontent.com/nnoromiv/mushee/master/src/assets/mushee.jpg',
                         },
-                        id: Math.round(Math.random() * 100000)
-                        })
-                    setButtonClicked('ADDED')
-                } catch (error){
-                    if(error.code === 4001){
-                        Swal.fire(
-                            'Adding Alert',
-                            'User denied transaction',
-                            'error'
-                        )
-                    } else {
-                        Swal.fire(
-                            'Wallet Adding Error',
-                            'Try again please',
-                            'error'
-                        )
-                        }
-                    setButtonClicked('ADD MSH')                    }     
-            } else {
-                Swal.fire(
-                    'Connect Alert',
-                    'Please Connect on Smart Chain',
-                    'error'
-                    ) 
-                setButtonClicked('TRY AGAIN')
-                }
-    } else {
-        Swal.fire(
-            'Connection error',
-            'Try connecting your account first',
-            'error'
-        )
-    }
-    }
+                    },
+                    id: Math.round(Math.random() * 100000)
+                    })
+                setButtonClicked('ADDED')
+            } catch (error) {
+                if(error.code === 4001){
+                    Swal.fire(
+                        'Buy Alert',
+                        'User denied transaction',
+                        'error'
+                    )
+                } else {
+                    Swal.fire(
+                        'Buy Alert',
+                        'Buy as low as 0.01 BNB.',
+                        'error'
+                    )
+                  }
+                  setButtonClicked('TRY AGAIN')  
+            }
+        }
+    };
 
     return (
         <div className='HomeHero_Text'>
