@@ -73,7 +73,7 @@ const HomeHeroText = () => {
                 </li>
             </ul>
             <div className='AuthButton'>
-                <Button variant='primary' className="Button" onClick={addWallet}>{buttonClicked}</Button>
+                {/* <Button variant='primary' className="Button" onClick={addWallet}>{buttonClicked}</Button> */}
                 <Button variant='outline-primary' className="Button" href='https://bscscan.com/token/0x6e937ec2a209060278f591b026b386db0c7b88d0'>BSC SCAN</Button> 
             </div>
         </div>

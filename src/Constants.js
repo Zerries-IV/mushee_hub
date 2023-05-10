@@ -8,10 +8,6 @@ const NAVBAR_LINKS = [
         link: 'BSC SCAN'
     },
     {
-        href: 'presale',
-        link: 'Presale'
-    },
-    {
         href: '#',
         link: 'FAQ'
     },
