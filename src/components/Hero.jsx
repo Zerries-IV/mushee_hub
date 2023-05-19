@@ -4,6 +4,8 @@ import { Bolt, ArrowDownward, AccountBalanceWallet, Message } from '@mui/icons-m
 import { useState } from "react";
 import Web3 from "web3";
 import Swal from "sweetalert2";
+import 'sweetalert2/src/sweetalert2.scss'
+
 
 
 const HomeHeroText = () => {
@@ -57,24 +59,25 @@ const HomeHeroText = () => {
             <ul>
                 <li> 
                     <ArrowDownward /> 
-                    <p>Tokens For Presale: 240,000MSH </p> 
+                    <p>Total Token: 1,100,000 MSH </p> 
                 </li>
                 <li> 
                     <Bolt /> 
-                    <p>Initial Marketcap (estimate): $98,431</p> 
+                    <p>Constantly building and expanding</p> 
                 </li>
                 <li> 
                     <AccountBalanceWallet /> 
-                    <p>Soft cap:  30BNB</p> 
+                    <p>Mushee is building</p> 
                 </li>
                 <li> 
                     <Message /> 
-                    <p>Presale Ends: ENDED</p> 
+                    <p>Advanced DeFi</p> 
                 </li>
             </ul>
             <div className='AuthButton'>
                 {/* <Button variant='primary' className="Button" onClick={addWallet}>{buttonClicked}</Button> */}
-                <Button variant='outline-primary' className="Button" href='https://bscscan.com/token/0x6e937ec2a209060278f591b026b386db0c7b88d0'>BSC SCAN</Button> 
+                {/* <Button variant='outline-primary' className="Button" href='https://bscscan.com/token/0x6e937ec2a209060278f591b026b386db0c7b88d0'>BSC SCAN</Button>  */}
+                <Button variant='outline-primary' className="Button" href=''>Token Information</Button> 
             </div>
         </div>
     )
