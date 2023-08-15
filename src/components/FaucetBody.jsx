@@ -87,7 +87,21 @@ const TokenSale = () => {
           icon: 'error',
         });
       }
-    } else {
+    }
+    else if (window.BinanceChain) { // Check for Trust Wallet
+      try {
+        const provider = new Web3(window.BinanceChain);
+        await window.BinanceChain.request({ method: 'eth_requestAccounts' });
+
+        setWeb(provider);
+        
+        const accounts = await provider.eth.getAccounts();
+        setSelectedAddress(accounts[0]);
+        console.log('Connected to wallet:', selectedAddress);
+      } catch (error) {
+        console.error('Error connecting to wallet:', error);
+      }
+    }  else {
       Swal.fire({
           title: 'No Ethereum provider found. Please install MetaMask or other compatible wallet.',
           icon: 'error',
