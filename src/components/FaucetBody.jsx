@@ -71,9 +71,11 @@ const TokenSale = () => {
             },
           ],
         });
+        
         setWeb(provider);
         
-        const accounts = await provider.eth.getAccounts();
+        // Request account access from Metamask
+        const accounts = await window.ethereum.enable();
         setSelectedAddress(accounts[0]);
         Swal.fire({
           title: 'Connected to wallet',
