@@ -1,16 +1,17 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer';
 import './Pages.scss'
-import PresaleCard from '../components/PresaleCard';
+// import PresaleCard from '../components/PresaleCard';
 
-function Businesses() {
+function Presale() {
   return (
-    <div className='Businesses'>
+    <div className='Presale'>
         <Navbar navActive='presale'/>
-        <PresaleCard />
+        <div style={{ textAlign: 'center', color: 'white', fontSize: '30px', fontWeight: '800', margin: '50px 0 -50px 0'}}>ENDED</div>
+        {/* <PresaleCard /> */}
         <Footer />
     </div>
   )
 }
 
-export default Businesses
+export default Presale

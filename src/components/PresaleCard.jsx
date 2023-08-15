@@ -7,7 +7,7 @@ import { useState } from "react";
 import Swal from 'sweetalert2';
 import 'sweetalert2/src/sweetalert2.scss'
 import { ADDRESS } from "../Constants";
-import ABI from '../abi.json'
+import ABI from '../../build/contracts/TestMusheeToken.json'
 import Web3 from "web3";
 
 

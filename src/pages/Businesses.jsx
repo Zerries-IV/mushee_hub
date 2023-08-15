@@ -8,7 +8,7 @@ import './Pages.scss'
 function Businesses() {
   return (
     <div className='Businesses'>
-        <Navbar />
+        <Navbar navActive='businesses' />
         <BusinessHero />
         <CryptoForBusiness />
         <HowTo />
