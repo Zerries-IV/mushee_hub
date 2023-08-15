@@ -18,11 +18,14 @@ const TokenSale = () => {
     const web3 = new Web3(window.ethereum)
     const [contract, setContract] = useState(null)
     const [requestCooldown, setRequestCooldown] = useState(0);
+    const [web, setWeb] = useState(null);
+    const [selectedAddress, setSelectedAddress] = useState('');
 
 
     useEffect(() => {
       const initializeContract = async () => {
           try {
+            setSelectedAddress('')
             const contractInstance = new web3.eth.Contract(ABI.abi, FAUCETADDRESS);            
             setContract(contractInstance)
             return contractInstance;
@@ -47,6 +50,50 @@ const TokenSale = () => {
         };    
         fetchData();
   }, []);
+
+  const connectWallet = async () => {
+    if (window.ethereum) {
+      try {
+        const provider = new Web3(window.ethereum);
+        await window.ethereum.request({
+          method: 'wallet_addEthereumChain',
+          params: [
+            {
+              chainId: '0x61', // BSC Testnet chain ID
+              chainName: 'Binance Smart Chain Testnet',
+              nativeCurrency: {
+                name: 'TestnetBNB',
+                symbol: 'tBNB',
+                decimals: 18,
+              },
+              rpcUrls: ['https://data-seed-prebsc-2-s3.binance.org:8545'], // BSC Testnet RPC URL
+              blockExplorerUrls: ['https://testnet.bscscan.com'], // BSC Testnet explorer URL
+            },
+          ],
+        });
+        setWeb(provider);
+        
+        const accounts = await provider.eth.getAccounts();
+        setSelectedAddress(accounts[0]);
+        Swal.fire({
+          title: 'Connected to wallet',
+          text: selectedAddress,
+          icon: 'success',
+        });
+      } catch (error) {
+        Swal.fire({
+          title: 'Error connecting to wallet',
+          text: error.message,
+          icon: 'error',
+        });
+      }
+    } else {
+      Swal.fire({
+          title: 'No Ethereum provider found. Please install MetaMask or other compatible wallet.',
+          icon: 'error',
+        });
+    }
+  };
 
   const getCooldownForAddress = async (address) => {
     try{
@@ -93,6 +140,12 @@ const TokenSale = () => {
     <div className='FaucetCard'>
       <h1> Get Test Tokens </h1>
       <p>This faucet transfers Test Tokens and Gas Tokens on Mushee. Confirm details before submitting</p>
+      {
+        selectedAddress === '' ?
+        <Button variant='primary' className='Button' onClick={connectWallet}>Connect Wallet</Button>
+        :
+        <p>{selectedAddress}</p>
+      }
       <Countdown seconds={requestCooldown} />
         <Formik initialValues={{ address: '' }}
         validationSchema={TokenSchema}

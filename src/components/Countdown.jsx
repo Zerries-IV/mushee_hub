@@ -38,7 +38,7 @@ function Countdown({ seconds }) {
 
   return (
     <div>
-      <div>
+      <div style={{textAlign: 'center'}}>
         {timeLeft.days} days, {timeLeft.hours} hours, {timeLeft.minutes} minutes, {timeLeft.seconds} seconds
       </div>
     </div>
