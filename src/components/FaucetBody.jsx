@@ -91,15 +91,39 @@ const TokenSale = () => {
     else if (window.BinanceChain) { // Check for Trust Wallet
       try {
         const provider = new Web3(window.BinanceChain);
-        await window.BinanceChain.request({ method: 'eth_requestAccounts' });
+        await window.BinanceChain.request({ 
+        method: 'wallet_addEthereumChain',
+        params: [
+          {
+            chainId: '0x61', // BSC Testnet chain ID
+            chainName: 'Binance Smart Chain Testnet',
+            nativeCurrency: {
+              name: 'TestnetBNB',
+              symbol: 'tBNB',
+              decimals: 18,
+            },
+            rpcUrls: ['https://data-seed-prebsc-2-s3.binance.org:8545'], // BSC Testnet RPC URL
+            blockExplorerUrls: ['https://testnet.bscscan.com'], // BSC Testnet explorer URL
+          },
+        ],
+       });
+       await window.ethereum.request({ method: 'eth_requestAccounts' });
 
         setWeb(provider);
         
         const accounts = await provider.eth.getAccounts();
         setSelectedAddress(accounts[0]);
-        console.log('Connected to wallet:', selectedAddress);
+        Swal.fire({
+          title: 'Connected to wallet',
+          text: selectedAddress,
+          icon: 'success',
+        });
       } catch (error) {
-        console.error('Error connecting to wallet:', error);
+        Swal.fire({
+          title: 'Error connecting to wallet',
+          text: error.message,
+          icon: 'error',
+        });
       }
     }  else {
       Swal.fire({
