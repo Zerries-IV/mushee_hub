@@ -12,7 +12,7 @@ const NAVBAR_LINKS = [
     //     link: 'Presale'
     // }, 
     {
-        href: 'musheeclaim.xyz',
+        href: 'https://musheeclaim.xyz',
         link: 'Faucet'
     },
     {
