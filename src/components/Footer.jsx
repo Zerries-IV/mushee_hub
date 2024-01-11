@@ -105,7 +105,7 @@ const FooterBottom = () => {
             <Socials />
             <div className='BottomText'>
                 <h5>Terms of use </h5>
-                <p>Ⓒ 2021 Mushee. All Rights Reserved </p>
+                <p>Ⓒ 2024 Mushee. All Rights Reserved </p>
             </div>
         </div>
     )
